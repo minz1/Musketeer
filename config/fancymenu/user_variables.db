@@ -1,7 +1,14 @@
-type = cached_variables
+type = user_variables
 
-variables {
-  seen_tutorial = true
-  easter_egg = n
+variable {
+  name = seen_tutorial
+  value = true
+  reset_on_launch = false
+}
+
+variable {
+  name = easter_egg
+  value = n
+  reset_on_launch = false
 }
 

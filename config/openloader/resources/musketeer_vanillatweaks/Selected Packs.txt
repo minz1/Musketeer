@@ -1,19 +1,22 @@
 Vanilla Tweaks Resource Pack
-Version: 1.19
+Version: 1.20
 Packs:
-	BedIcons
-	DirectionalHoppers
-	DirectionalDispensersDroppers
-	CompassLodestone
-	DifferentStems
-	BetterParticles
+	SmoothCoarseDirt
 	HDShieldBanners
 	PinkEndRods
 	UniqueDyes
 	2DSpyglass
 	PlainLeatherArmor
+	DirectionalDispensersDroppers
+	BetterObservers
+	CompassLodestone
+	DifferentStems
+	BedIcons
+	ProperBreakParticles
+	DirectionalHoppers
 	SmoothDirt
 	CopperBG
 
 Combined packs:
 	CopperBG+SmoothDirt
+	DirectionalHoppers+ProperBreakParticles

@@ -326,7 +326,7 @@
 	# 
 	# The version of itlt that created this config file. Intended to be used for migrating
 	# config changes when you update the mod. Please don't touch this, this is for itlt itself to change.
-	configVersion = "2.2.0"
+	configVersion = "2.2.1"
 
 [ServerList]
 	# 
@@ -358,11 +358,11 @@
 		# Note: Put "%modpackName" to fill in your modpack's display name from [Display.General] modpackName.
 		# 
 		# Examples:
-		# - "ModpackName - %mc" = "ModpackName - Minecraft* 1.19"
-		# - "%mc - ModpackName" = "Minecraft* 1.19 - ModpackName"
-		# - "ModpackName (%mc)" = "ModpackName (Minecraft* 1.19)"
-		# - "%modpackName (%mc)" = "ModpackName (Minecraft* 1.19)"
-		# - "ModpackName v2 based on %mc" = "ModpackName v2 based on Minecraft* 1.19"
+		# - "%modpackName - %mc" = "ModpackName - Minecraft* 1.19.3"
+		# - "%mc - %modpackName" = "Minecraft* 1.19.3 - ModpackName"
+		# - "%modpackName (%mc)" = "ModpackName (Minecraft* 1.19.3)"
+		# - "%modpackName (%mc)" = "ModpackName (Minecraft* 1.19.3)"
+		# - "ModpackName v2 based on %mc" = "ModpackName v2 based on Minecraft* 1.19.3"
 		# 
 		# Note: enableCustomWindowTitle must be enabled for this to take effect.
 		customWindowTitleText = "%modpackName - %mc"

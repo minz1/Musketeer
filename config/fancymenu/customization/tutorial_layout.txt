@@ -1,54 +1,97 @@
-type = menu
+type = fancymenu_layout
 
-customization-meta {
+layout-meta {
   identifier = tutorial
-  randomgroup = 1
-  renderorder = foreground
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1712955097083
+  is_enabled = true
   randommode = false
+  randomgroup = 1
   randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:1062479a-e1ea-43ef-9903-56c579e16fef-1712955097083] = [groups:][instances:]
+}
+
+menu_background {
+  image_path = [source:local]fancymenu_setups/_images/loading.png
+  slide = false
+  repeat_texture = false
+  background_type = image
 }
 
 customization {
-  path = fancymenu_setups/_images/loading.png
-  action = texturizebackground
-}
-
-customization {
-  keepaspectratio = false
   action = backgroundoptions
+  keepaspectratio = false
 }
 
-customization {
-  path = fancymenu_setups/_images/snence.png
-  orientation = element
-  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:839bf3b8-f5e8-4d23-84fb-68f75f648b161697502603518] = easter_egg:yes
-  orientation_element = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+  repeat_scroll_list_header_texture = false
+  repeat_scroll_list_footer_texture = false
+}
+
+element {
+  source = [source:local]fancymenu_setups/_images/snence.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = 9022cfe1-dab8-4df6-ba67-e01a4714aa7e1697502176262
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
   x = -13
-  width = 18
-  action = addtexture
-  actionid = 9022cfe1-dab8-4df6-ba67-e01a4714aa7e1697502176262
   y = 47
+  width = 18
   height = 28
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = fb7f8262-5a80-4511-b28a-ad7e19713c9b-1712955097084
+  [loading_requirement_container_meta:fb7f8262-5a80-4511-b28a-ad7e19713c9b-1712955097084] = [groups:][instances:839bf3b8-f5e8-4d23-84fb-68f75f648b161697502603518;]
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:839bf3b8-f5e8-4d23-84fb-68f75f648b161697502603518] = easter_egg:yes
 }
 
-customization {
-  orientation = mid-centered
+element {
+  button_element_executable_block_identifier = 4e4529ad-f955-46f9-b58c-56ef9f3cf8a3-1712955097084
+  [executable_action_instance:4e0fe826-0b36-4971-9e39-19aee760cbde-1712955097084][action_type:closegui] = 
+  [executable_block:4e4529ad-f955-46f9-b58c-56ef9f3cf8a3-1712955097084][type:generic] = [executables:4e0fe826-0b36-4971-9e39-19aee760cbde-1712955097084;]
+  backgroundnormal = [source:local]fancymenu_setups/_images/btn200.png
+  backgroundhovered = [source:local]fancymenu_setups/_images/btn200_hover.png
   restartbackgroundanimations = true
-  buttonaction = closegui%btnaction_splitter_fm%
-  backgroundhovered = fancymenu_setups/_images/btn200_hover.png
-  label = Got it!
   loopbackgroundanimations = true
+  nine_slice_custom_background = false
+  nine_slice_border_x = 5
+  nine_slice_border_y = 5
   hoverlabel = Got it!
+  label = Got it!
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = f1b20358-215d-4547-b5e1-41d3bd36b9991686592960698
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = mid-centered
   x = -100
-  width = 200
-  action = addbutton
-  actionid = f1b20358-215d-4547-b5e1-41d3bd36b9991686592960698
   y = 81
-  backgroundnormal = fancymenu_setups/_images/btn200.png
+  width = 200
   height = 20
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = e6acac1e-980c-489f-aea2-68f518a7d57c-1712955097084
+  [loading_requirement_container_meta:e6acac1e-980c-489f-aea2-68f518a7d57c-1712955097084] = [groups:][instances:]
 }
 
-customization {
+element {
   tickeraction_0_set_variable = seen_tutorial:true
   orientation = top-left
   tick_delay = 0
@@ -60,9 +103,10 @@ customization {
   y = 7
   tick_mode = on_menu_load
   height = 10
+  element_type = fancymenu_customization_item_ticker
 }
 
-customization {
+element {
   orientation = mid-centered
   enable_scrolling = true
   shadow = true
@@ -79,9 +123,10 @@ customization {
   y = -113
   alignment = centered
   height = 40
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = true
@@ -99,33 +144,60 @@ customization {
   y = 23
   alignment = centered
   height = 13
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  path = fancymenu_setups/_images/powder_item.png
-  orientation = element
-  orientation_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
+element {
+  source = [source:local]fancymenu_setups/_images/powder_item.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = c1cabdf5-eaaa-4eb6-9b65-fb3d869529021697500659433
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
   x = 54
-  width = 18
-  action = addtexture
-  actionid = c1cabdf5-eaaa-4eb6-9b65-fb3d869529021697500659433
   y = 25
+  width = 18
   height = 18
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 53bc56c9-df3f-4251-bb48-54b3716d52c9-1712955097084
+  [loading_requirement_container_meta:53bc56c9-df3f-4251-bb48-54b3716d52c9-1712955097084] = [groups:][instances:]
 }
 
-customization {
-  path = fancymenu_setups/_images/mouse.png
-  orientation = element
-  orientation_element = c1cabdf5-eaaa-4eb6-9b65-fb3d869529021697500659433
+element {
+  source = [source:local]fancymenu_setups/_images/mouse.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = 253f3aa6-44ff-4f60-85e2-90b248a7702f1697500775566
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = c1cabdf5-eaaa-4eb6-9b65-fb3d869529021697500659433
   x = 2
-  width = 21
-  action = addtexture
-  actionid = 253f3aa6-44ff-4f60-85e2-90b248a7702f1697500775566
   y = 15
+  width = 21
   height = 30
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 8e884136-f0f7-41cd-9bbc-f488219b85a1-1712955097084
+  [loading_requirement_container_meta:8e884136-f0f7-41cd-9bbc-f488219b85a1-1712955097084] = [groups:][instances:]
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -144,9 +216,10 @@ customization {
   alignment = right
   base_color = 00bbff
   height = 25
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -165,33 +238,60 @@ customization {
   alignment = left
   base_color = ff8800
   height = 25
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  path = fancymenu_setups/_images/powder.png
-  orientation = element
-  orientation_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
+element {
+  source = [source:local]fancymenu_setups/_images/powder.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
   x = 25
-  width = 152
-  action = addtexture
-  actionid = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
   y = 73
+  width = 152
   height = 57
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = bdf531af-a996-4283-8e54-20d99e0a29a6-1712955097084
+  [loading_requirement_container_meta:bdf531af-a996-4283-8e54-20d99e0a29a6-1712955097084] = [groups:][instances:]
 }
 
-customization {
-  path = fancymenu_setups/_images/info_tab.png
-  orientation = element
-  orientation_element = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
+element {
+  source = [source:local]fancymenu_setups/_images/info_tab.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = ed172206-d3a0-4e25-b3cf-bfd2cdfc90041697501128338
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
   x = 119
-  width = 24
-  action = addtexture
-  actionid = ed172206-d3a0-4e25-b3cf-bfd2cdfc90041697501128338
   y = -26
+  width = 24
   height = 29
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 6c5a6eb6-a58a-4188-8c47-1cfa4f946885-1712955097084
+  [loading_requirement_container_meta:6c5a6eb6-a58a-4188-8c47-1cfa4f946885-1712955097084] = [groups:][instances:]
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -210,9 +310,10 @@ customization {
   alignment = centered
   base_color = #e9a9e8
   height = 22
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -231,21 +332,35 @@ customization {
   alignment = centered
   base_color = ffffff
   height = 12
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  path = fancymenu_setups/_images/searchbar.png
-  orientation = element
-  orientation_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
+element {
+  source = [source:local]fancymenu_setups/_images/searchbar.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = dc120b2a-1f7e-470f-be9f-30951427c9fe1697501433493
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = bbb5d8c0-840c-4e18-bbab-54357007a1b01697500540448
   x = 28
-  width = 162
-  action = addtexture
-  actionid = dc120b2a-1f7e-470f-be9f-30951427c9fe1697501433493
   y = 141
+  width = 162
   height = 20
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 91dd8c65-45f4-4185-bb90-9ed12b1dced6-1712955097085
+  [loading_requirement_container_meta:91dd8c65-45f4-4185-bb90-9ed12b1dced6-1712955097085] = [groups:][instances:]
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -263,21 +378,35 @@ customization {
   y = -10
   alignment = left
   height = 13
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  path = fancymenu_setups/_images/variants.png
-  orientation = element
-  orientation_element = da1903d0-496f-4c58-aed8-e8b4aa1888731697501694573
+element {
+  source = [source:local]fancymenu_setups/_images/variants.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = da1903d0-496f-4c58-aed8-e8b4aa1888731697501694573
   x = 36
-  width = 131
-  action = addtexture
-  actionid = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
   y = 26
+  width = 131
   height = 112
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = c26ae8d1-9f2b-483c-acd1-e991bacb212c-1712955097085
+  [loading_requirement_container_meta:c26ae8d1-9f2b-483c-acd1-e991bacb212c-1712955097085] = [groups:][instances:]
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = true
@@ -295,23 +424,33 @@ customization {
   y = 23
   alignment = centered
   height = 13
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  advanced_height = 150
-  orientation = mid-centered
+element {
   shape = rectangle
   color = #ffffff77
-  x = 0
-  width = 1
-  action = addshape
-  actionid = 2d837feb-ac1d-4027-a35d-b8ee2977ea511697501731927
-  y = -81
+  element_type = shape
+  instance_identifier = 2d837feb-ac1d-4027-a35d-b8ee2977ea511697501731927
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = mid-centered
   advanced_width = 1
+  advanced_height = 150
+  x = 0
+  y = -81
+  width = 1
   height = 150
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 08372521-b2d5-4b61-9b7d-ca9e69e7fd4d-1712955097086
+  [loading_requirement_container_meta:08372521-b2d5-4b61-9b7d-ca9e69e7fd4d-1712955097086] = [groups:][instances:]
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -330,9 +469,10 @@ customization {
   alignment = centered
   base_color = ffffff
   height = 14
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
+element {
   orientation = element
   enable_scrolling = true
   shadow = false
@@ -351,29 +491,56 @@ customization {
   alignment = centered
   base_color = ffffff
   height = 28
+  element_type = fancymenu_customization_item_text
 }
 
-customization {
-  path = fancymenu_setups/_images/lissa.png
-  orientation = element
-  orientation_element = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
+element {
+  source = [source:local]fancymenu_setups/_images/lissa.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = c0f96d28-80d8-4ab0-a002-2787206eba781697503242654
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = 0976dadf-87a7-476f-8983-a06b367c5f041697501024326
   x = -38
-  width = 46
-  action = addtexture
-  actionid = c0f96d28-80d8-4ab0-a002-2787206eba781697503242654
   y = 21
+  width = 46
   height = 50
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = 3a342f2b-7ab0-4c03-8f33-4013d85abf3b-1712955097086
+  [loading_requirement_container_meta:3a342f2b-7ab0-4c03-8f33-4013d85abf3b-1712955097086] = [groups:][instances:]
 }
 
-customization {
-  path = fancymenu_setups/_images/lissa2.png
-  orientation = element
-  orientation_element = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
+element {
+  source = [source:local]fancymenu_setups/_images/lissa2.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = 5f25f17f-39d4-454c-afba-6ce51e6cff4c1697503488646
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = element
+  anchor_point_element = a3196713-d3f5-45d3-9a55-1ffae537f8bd1697501609803
   x = 123
-  width = 52
-  action = addtexture
-  actionid = 5f25f17f-39d4-454c-afba-6ce51e6cff4c1697503488646
   y = 29
+  width = 52
   height = 60
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = false
+  element_loading_requirement_container_identifier = e5a10b08-5901-4ebc-aefc-cd48bf952c4a-1712955097086
+  [loading_requirement_container_meta:e5a10b08-5901-4ebc-aefc-cd48bf952c4a-1712955097086] = [groups:][instances:]
 }
 
