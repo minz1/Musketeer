@@ -215,6 +215,84 @@
 				stone_tile = true
 				blackstone_tile = true
 
+			[general.types.cut_block_type.create_things_and_misc]
+				brass_tiles = true
+				brass_brick = true
+
+			[general.types.cut_block_type.create]
+				copper_shingle = true
+				exposed_copper_shingle = true
+				weathered_copper_shingle = true
+				oxidized_copper_shingle = true
+				waxed_copper_shingle = true
+				waxed_exposed_copper_shingle = true
+				waxed_weathered_copper_shingle = true
+				waxed_oxidized_copper_shingle = true
+				copper_tile = true
+				exposed_copper_tile = true
+				weathered_copper_tile = true
+				oxidized_copper_tile = true
+				waxed_copper_tile = true
+				waxed_exposed_copper_tile = true
+				waxed_weathered_copper_tile = true
+				waxed_oxidized_copper_tile = true
+				cut_granite = true
+				polished_cut_granite = true
+				cut_granite_brick = true
+				small_granite_brick = true
+				cut_diorite = true
+				polished_cut_diorite = true
+				cut_diorite_brick = true
+				small_diorite_brick = true
+				cut_andesite = true
+				polished_cut_andesite = true
+				cut_andesite_brick = true
+				small_andesite_brick = true
+				cut_calcite = true
+				polished_cut_calcite = true
+				cut_calcite_brick = true
+				small_calcite_brick = true
+				cut_dripstone = true
+				polished_cut_dripstone = true
+				cut_dripstone_brick = true
+				small_dripstone_brick = true
+				cut_deepslate = true
+				polished_cut_deepslate = true
+				cut_deepslate_brick = true
+				small_deepslate_brick = true
+				cut_tuff = true
+				polished_cut_tuff = true
+				cut_tuff_brick = true
+				small_tuff_brick = true
+				cut_asurine = true
+				polished_cut_asurine = true
+				cut_asurine_brick = true
+				small_asurine_brick = true
+				cut_crimsite = true
+				polished_cut_crimsite = true
+				cut_crimsite_brick = true
+				small_crimsite_brick = true
+				cut_limestone = true
+				polished_cut_limestone = true
+				cut_limestone_brick = true
+				small_limestone_brick = true
+				cut_ochrum = true
+				polished_cut_ochrum = true
+				cut_ochrum_brick = true
+				small_ochrum_brick = true
+				cut_scoria = true
+				polished_cut_scoria = true
+				cut_scoria_brick = true
+				small_scoria_brick = true
+				cut_scorchia = true
+				polished_cut_scorchia = true
+				cut_scorchia_brick = true
+				small_scorchia_brick = true
+				cut_veridium = true
+				polished_cut_veridium = true
+				cut_veridium_brick = true
+				small_veridium_brick = true
+
 		[general.types.leaves_type]
 
 			[general.types.leaves_type.quark]
@@ -273,4 +351,8 @@
 				stripped_post = true
 				ladder = true
 				hollow_log = true
+
+			[general.entries.wood_type.create]
+				window = true
+				window_pane = true
 
