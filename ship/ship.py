@@ -258,7 +258,7 @@ def make_manifests(minecraftinstance_data, version):
 		'files': modirinth_files,
 		'dependencies': {
 			'minecraft': mc_ver,
-			'neoforge': forge_ver_raw
+			'forge': forge_ver_raw
 		}
 	}
 
@@ -277,11 +277,11 @@ def write_mods_csv(minecraftinstance_data):
 	mc_ver = modloader['minecraftVersion']
 	
 	forge_ver = mc_ver + '-' + modloader['forgeVersion']
-	forge_filename = 'neoforge-' + forge_ver + '-installer.jar'
-	forge_url = 'https://maven.neoforged.net/releases/net/neoforged/neoforge/' + forge_ver + '/' + forge_filename
+	forge_filename = 'forge-' + forge_ver + '-installer.jar'
+	forge_url = 'https://files.minecraftforge.net/maven/net/minecraftforge/forge/' + forge_ver + '/' + forge_filename
 	download_files.insert(0, {
 		'url': forge_url,
-		'filename': 'neoforge-installer.jar'
+		'filename': 'forge-installer.jar'
 	})
 
 	with open(overrides_dir + '/mods.csv', 'w', encoding="utf-8") as out_file:
