@@ -27,6 +27,16 @@
 	"Terrablender Modify Vanilla Anyway" = false
 	#The amount of slots the chest button system should seek when trying to figure out if a container should be eligible for them.
 	"Chest Button Slot Target" = 27
+	#Set this to false to not generate the Quark Programmer Art resource pack
+	"Generate Programmer Art" = true
+
+	[general.chest_button_offsets]
+		"Player X" = 0
+		"Player Y" = 0
+		"Top X" = 0
+		"Top Y" = 0
+		"Middle X" = 0
+		"Middle Y" = 0
 
 [categories]
 	automation = true
@@ -173,8 +183,8 @@
 
 	[building.thatch]
 		#This feature disables itself if any of the following mods are loaded:
-		# - goated
 		# - environmental
+		# - goated
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
@@ -208,8 +218,8 @@
 
 	[building.leaf_carpet]
 		#This feature disables itself if any of the following mods are loaded:
-		# - woodworks
 		# - immersive_weathering
+		# - woodworks
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = true
@@ -537,6 +547,8 @@
 	"Diamond Repair" = true
 	"Map Washing" = true
 	"Improved Sponges" = true
+	"Magma Keeps Concrete Powder" = true
+	"Petals On Water" = true
 
 	[tweaks.utility_recipes]
 		#Can any wool color be dyed?
@@ -705,6 +717,11 @@
 		"Disable Recipe Book" = false
 		#If enabled, advancements granting recipes will be stopped from loading, potentially reducing the lagspike on first world join.
 		"Filter Recipe Advancements" = true
+		#This feature disables itself if any of the following mods are loaded:
+		# - nerb
+		#This is done to prevent content overlap.
+		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
+		"Ignore Anti Overlap" = false
 
 	[tweaks.diamond_repair]
 		#List of changes to apply to repair items, format is "<item>=<repair_item>" as seen in the defualt.
@@ -751,6 +768,7 @@
 	"Big Stone Clusters" = true
 	"Azalea Wood" = true
 	"Ancient Wood" = true
+	"Fallen Logs" = true
 
 	[world.spiral_spires]
 		Rarity = 200
@@ -1309,6 +1327,18 @@
 		"Sniffing Loot Weight" = 1
 		#Allowed values: [0,)
 		"Sniffing Loot Quality" = 0
+
+	[world.fallen_logs]
+		#Requires the Hollow Logs module to be enabled too
+		"Use Hollow Logs" = true
+		Rarity = 5
+		"Sparse Biome Rarity" = 12
+		#Tags that define which biomes can have which wood types
+		"Biome Tags" = ["quark:has_fallen_acacia=minecraft:acacia_log", "quark:has_fallen_birch=minecraft:birch_log", "quark:has_fallen_cherry=minecraft:cherry_log", "quark:has_fallen_dark_oak=minecraft:dark_oak_log", "quark:has_fallen_jungle=minecraft:jungle_log", "quark:has_fallen_mangrove=minecraft:mangrove_log", "quark:has_fallen_oak=minecraft:oak_log", "quark:has_fallen_spruce=minecraft:spruce_log"]
+
+		[world.fallen_logs.dimensions]
+			"Is Blacklist" = false
+			Dimensions = ["minecraft:overworld"]
 
 [mobs]
 	Wraith = false

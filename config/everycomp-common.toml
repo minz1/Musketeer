@@ -215,10 +215,6 @@
 				stone_tile = true
 				blackstone_tile = true
 
-			[general.types.cut_block_type.create_things_and_misc]
-				brass_tiles = true
-				brass_brick = true
-
 			[general.types.cut_block_type.create]
 				copper_shingle = true
 				exposed_copper_shingle = true
