@@ -1809,7 +1809,7 @@
 [oddities]
 	"Totem Of Holding" = true
 	"Tiny Potato" = true
-	Pipes = true
+	Pipes = false
 	"Matrix Enchanting" = true
 	Magnets = true
 	Crate = true
